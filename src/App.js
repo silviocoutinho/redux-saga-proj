@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducers from './reducers/index'
+
+const store = createStore(reducers)
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <Provider store={store}>
+      <div className="App">
+      
+      </div>
+    </Provider>
   );
 }
 
